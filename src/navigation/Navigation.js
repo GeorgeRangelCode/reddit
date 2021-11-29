@@ -1,17 +1,19 @@
 import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import FavoriteScreen from "../screens/Favorite";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import NewsScreen from "../screens/News";
-import AccountScreen from "../screens/Account";
+import TopScreen from "../screens/Top";
+import PopularScreen from "../screens/Popular";
+import HotScreen from "../screens/Hot";
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 const Navigation = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen name="News" component={NewsScreen} />
-      <Tab.Screen name="Favorite" component={FavoriteScreen} />
-      <Tab.Screen name="Account" component={AccountScreen} />
+      <Tab.Screen name="Top" component={TopScreen} />
+      <Tab.Screen name="Popular" component={PopularScreen} />
+      <Tab.Screen name="Hot" component={HotScreen} />
     </Tab.Navigator>
   );
 };

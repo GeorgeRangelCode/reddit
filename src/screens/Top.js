@@ -1,12 +1,12 @@
 import React from "react";
 import { SafeAreaView, Text } from "react-native";
 
-const Account = () => {
+const Top = () => {
   return (
     <SafeAreaView>
-      <Text>Account</Text>
+      <Text>Top</Text>
     </SafeAreaView>
   );
 };
 
-export default Account;
+export default Top;

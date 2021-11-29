@@ -1,12 +1,12 @@
 import React from "react";
 import { Text, SafeAreaView } from "react-native";
 
-const Favorite = () => {
+const Popular = () => {
   return (
     <SafeAreaView>
-      <Text>Favorite</Text>
+      <Text>Popular</Text>
     </SafeAreaView>
   );
 };
 
-export default Favorite;
+export default Popular;

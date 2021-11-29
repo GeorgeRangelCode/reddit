@@ -1,28 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { SafeAreaView, Text } from "react-native";
-import { getNewsAPI } from "../api/reddit";
+import React from "react";
+import { SafeAreaView, View } from "react-native";
+import NewsList from "../components/NewsList";
+import { useGetNews } from "../hooks/useGetNews";
 
 const News = () => {
-  useEffect(() => {
-    (async () => {
-      await loadNews();
-    })();
-  }, []);
+  const { news } = useGetNews();
 
-  const loadNews = async () => {
-    try {
-      const response = await getNewsAPI();
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  return (
-    <SafeAreaView>
-      <Text>News</Text>
-    </SafeAreaView>
-  );
+  return <View>{news && <NewsList news={news} />}</View>;
 };
 
 export default News;
